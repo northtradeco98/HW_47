@@ -12,18 +12,18 @@ class Confirmation {
        static Writer report;
        
        static void validate(ExtentTest logger) throws Exception {
-    	   
               p.load(new FileInputStream("./input.properties"));
+              
               // 05 :: First Name
               Common.writeInfoLine("First Name", p.getProperty("fname_value"),
-              Common.getValue(By.id(p.getProperty("fname_id"))), logger);
+              Common.getValue(By.id(p.getProperty("el_07"))), logger);
               // 06 :: Last Name
               Common.writeInfoLine("Last Name", p.getProperty("lname_value"),
-              Common.getValue(By.id(p.getProperty("lname_id"))), logger);
+              Common.getValue(By.id(p.getProperty("lel_09"))), logger);
               // 07 :: Email Name
               Common.writeInfoLine("Email", p.getProperty("email_value"),
-              Common.getValue(By.id(p.getProperty("email_id"))), logger);
+              Common.getValue(By.id(p.getProperty("el_11"))), logger);
               // 08 :: Phone Name
               Common.writeInfoLine("Phone", p.getProperty("phone_value"),
-              Common.getValue(By.id(p.getProperty("phone_id"))), logger);}
+              Common.getValue(By.id(p.getProperty("el_13"))), logger);}
 }

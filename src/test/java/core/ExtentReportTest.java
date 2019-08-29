@@ -18,31 +18,93 @@ public class ExtentReportTest {
        static String browser = System.getProperty("browser");     // -Dbrowser="firefox"
        @Test(priority = 0)
        public void SignUpTest() throws Exception {
-              logger = extent.createTest("SignUp Page Validation");
-              SignUp.validate(logger);
-              // First Name
-              Assert.assertEquals(p.getProperty("fname_value"), Common.getValue(By.id(p.getProperty("fname_id"))));
-              // Last Name
-              Assert.assertEquals(p.getProperty("lname_value"), Common.getValue(By.id(p.getProperty("lname_id"))));
-              // Email Name
-              Assert.assertEquals(p.getProperty("email_value"), Common.getValue(By.id(p.getProperty("email_id"))));
-              // Phone Name
-              Assert.assertEquals(p.getProperty("phone_value"), Common.getValue(By.id(p.getProperty("phone_id"))));
-              // Submit   
-              Common.submit(By.id(p.getProperty("submit_id")));}
+           logger = extent.createTest("SignUp Page Validation");
+           SignUp.validate(logger);
+              
+    	   Assert.assertEquals(p.getProperty("fname_value"), Common.getValue(By.id(p.getProperty("el_07"))));
+           Assert.assertEquals(p.getProperty("lname_value"), Common.getValue(By.id(p.getProperty("el_09"))));
+           Assert.assertEquals(p.getProperty("email_value"), Common.getValue(By.id(p.getProperty("el_11"))));
+           Assert.assertEquals(p.getProperty("phone_value"), Common.getValue(By.id(p.getProperty("el_13"))));
+    	   
+    	   
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_01"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_02"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_03"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_04"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_05"))));
+              
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_06"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_07"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_08"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_09"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_10"))));
+              
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_11"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_12"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_13"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_14"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_15"))));
+              
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_16"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_17"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_18"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_19"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_20"))));
+              
+              Assert.assertTrue(Common.isElementPresent(By.xpath(p.getProperty("el_21"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_22"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_23"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_24"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_25"))));
+              
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_26"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_27"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_28"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_29"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_30"))));
+              
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_31"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_32"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_33"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_33"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_34"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_35"))));
+              
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_36"))));
+              Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_37"))));
+              Assert.assertTrue(Common.isElementPresent(By.xpath(p.getProperty("el_38"))));
+              Assert.assertTrue(Common.isElementPresent(By.xpath(p.getProperty("el_39"))));
+              Assert.assertTrue(Common.isElementPresent(By.xpath(p.getProperty("el_40"))));
+              Assert.assertTrue(Common.isElementPresent(By.xpath(p.getProperty("el_41"))));
+              
+              Common.submit(By.id(p.getProperty("el_29")));}
+       
        @Test(dependsOnMethods = {"SignUpTest"}, priority = 1)
        public void ConfirmationTest() throws Exception {
-              Common.waitTitlePage("Confirmation");
-              logger = extent.createTest("Confirmation Page Validation");
-              Confirmation.validate(logger);
-             // First Name
-Assert.assertEquals(p.getProperty("fname_value"), Common.getValue(By.id(p.getProperty("fname_id"))));
-              // Last Name
-Assert.assertEquals(p.getProperty("lname_value"), Common.getValue(By.id(p.getProperty("lname_id"))));
-              // Email Name
-Assert.assertEquals(p.getProperty("email_value"), Common.getValue(By.id(p.getProperty("email_id"))));
-              // Phone Name
-Assert.assertEquals(p.getProperty("phone_value"), Common.getValue(By.id(p.getProperty("phone_id"))));}
+                Common.waitTitlePage("Confirmation");
+//              logger = extent.createTest("Confirmation Page Validation");
+//              Confirmation.validate(logger);
+//              
+//              Assert.assertEquals(p.getProperty("fname_value"), Common.getValue(By.id(p.getProperty("el_07"))));
+//              Assert.assertEquals(p.getProperty("lname_value"), Common.getValue(By.id(p.getProperty("el_09"))));
+//              Assert.assertEquals(p.getProperty("email_value"), Common.getValue(By.id(p.getProperty("el_11"))));
+//              Assert.assertEquals(p.getProperty("phone_value"), Common.getValue(By.id(p.getProperty("el_13"))));
+
+		Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_05"))));
+		Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_06"))));
+		Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_07"))));
+		Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_08"))));
+		Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_09"))));
+
+		Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_10"))));
+		Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_11"))));
+		Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_12"))));
+		Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_13"))));
+		Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_14"))));
+
+		Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_42"))));
+		Assert.assertTrue(Common.isElementPresent(By.id(p.getProperty("el_43"))));
+}
        @BeforeClass
        public void beforeClass() throws Exception {
 if(browser == null) {System.err.println("Please provide browser: -Dbrowser=firefox"); System.exit(0);}

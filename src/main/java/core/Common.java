@@ -130,7 +130,7 @@ return browser.replaceFirst(String.valueOf(browser.charAt(0)), String.valueOf(br
        static String getTitleName() {return driver.getTitle().toString().trim();}
  
        static void waitTitlePage(String title){
-              WebDriverWait wait = new WebDriverWait(driver, 15);
+              WebDriverWait wait = new WebDriverWait(driver, 25);
               wait.until(ExpectedConditions.titleIs(title));}
       
        static void quit(){driver.quit();}
